@@ -1,0 +1,13 @@
+.edit-button {
+    position: absolute;
+    left: 187px;
+    top: 172px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    width: 38px;
+    height: 18px;
+    font-size: 12px;
+    display: block;
+    cursor: pointer;
+}

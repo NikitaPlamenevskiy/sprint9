@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body>
+  <div class="root">
+    <header class="header root__section">
+      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+    </header>
+    <div class="profile root__section">
+      <div class="user-info">
+        <div class="user-info__photo"></div>
+        <div class="user-info__data">
+          <h1 class="user-info__name"></h1>
+          <p class="user-info__job"></p>
+        </div>
+        <button class="button user-info__button">+</button>
+        <button class="edit-button">Edit</button>
+      </div>
+      
+    </div>
+    <div class="places-list root__section">
+
+
+    </div>
+    
+	<div class="popup-image">
+		<div class="popup-image__block">
+			<img src="" class="popup-image__content">
+			<img src="./images/close.svg" alt="" class="popup-image__close">
+		</div>	
+	</div>	
+   
+    <div class="popup">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <h3 class="popup__title">Новое место</h3>
+        <form class="popup__form" name="newCard">
+            <input type="text" onkeyup="checkInputPopup()" name="name" class="popup__input popup__input_type_name" placeholder="Название">
+            <input type="text" onkeyup="checkInputPopup()"  name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку">
+            <button type="submit" class="button popup__button" disabled>+</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="popup-profile">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup-profile__close">
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form" name="newProfile">
+            <input type="text" onkeyup="checkInputPopup()" name="profilename" class="popup__input popup__input_type_name-prof" placeholder="Имя" value="Plamenevskiy Nikita" autocomplete="off" minlength="2" maxlength="30" required/>        
+            <div class="popup__error popup__error_name"></div>
+            <input type="text" onkeyup="checkInputPopup()" name="about" class="popup__input popup__input_type_about" placeholder="О себе" value="Junior Front-end" autocomplete="off" minlength="2" maxlength="30" required/>
+            <div class="popup__error popup__error_about"></div>
+            <button type="submit" class="popup-profile__button" disabled>Сохранить</button>
+        </form>
+      </div>
+    </div>
+    
+  </div>
+  
+  <script src='modules/api.js'></script>
+  <script src='modules/checkValidity.js'></script>
+  <script src='modules/checkInputPopup.js'></script>
+  <script src='modules/addUserInfo.js'></script>
+  <script src='modules/Popup.js'></script>
+  <script src='modules/initialCards.js'></script>
+  <script src='modules/Card.js'></script>
+  <script src='modules/CardList.js'></script>
+  <script src="script.js"></script>
+  <script src="index.js"></script>
+  
+</body>
+</html>
+
